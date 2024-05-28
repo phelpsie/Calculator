@@ -1,7 +1,19 @@
+html,body {
+    height:100%;
+    min-height:100%;
+    max-height:100%;
+  }
+
 body {
     display: flex;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.position-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .calculator-body {
@@ -28,7 +40,7 @@ body {
 
 .buttons-div {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
@@ -41,11 +53,6 @@ button {
     border: 0px;
     font-size: larger;
     color: white;
-}
-
-button.clear {
-    border-radius: 10px;
-    width: 140px;
 }
 
 .operator {
@@ -63,6 +70,6 @@ button.clear {
     padding-left: 15px;
 }
 
-.clear {
+.clear, .plus-minus, .percent {
     color: black;
 }
