@@ -25,6 +25,18 @@ let b = 5;
 
 console.log(add(a,b), subtract(a,b), multiply(a,b), divide(a,b));
 
+//Operate Function
+function operate(operator, firstOperand, secondOperand) {
+    if (operator === '+') {
+        return add(firstOperand, secondOperand);
+    } else if (operator === '-') {
+        return subtract(firstOperand, secondOperand);
+    } else if (operator === '*') {
+        return multiply(firstOperand, secondOperand);
+    } else return divide(firstOperand, secondOperand);
+    }
+
+console.log(operate('-', 10, 20));
 
 
 
