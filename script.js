@@ -1,3 +1,8 @@
+//Calculator Equation Variables
+let firstOperand;
+let operator;
+let secondOperand;
+
 //Calculation Functions
 function add(a, b) {
     return a + b;
