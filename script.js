@@ -160,7 +160,9 @@ zeroBtn.addEventListener('click', function() {
 })
 
 decimalBtn.addEventListener('click', function() {
-    let displayValue = display.textContent += ".";
+    if (!display.textContent.includes('.')) {
+        let displayValue = display.textContent += ".";
+    } else return displayValue;
     console.log(displayValue);
 })
 
