@@ -85,19 +85,24 @@ clearBtn.addEventListener('click', function() {
     console.log(displayValue);
 })
 
+divideBtn.addEventListener('click', function () {
+    let displayValue = display.textContent = "/";
+    console.log(displayValue);
+})
+
 //...
 sevenBtn.addEventListener('click', function() {
-    let displayValue = display.textContent = "7";
+    let displayValue = display.textContent += "7";
     console.log(displayValue);
 })
 
 eightBtn.addEventListener('click', function() {
-    let displayValue = display.textContent = "8";
+    let displayValue = display.textContent += "8";
     console.log(displayValue);
 })
 
 nineBtn.addEventListener('click', function() {
-    let displayValue = display.textContent = "9";
+    let displayValue = display.textContent += "9";
     console.log(displayValue);
 })
 
@@ -108,17 +113,17 @@ multiplyBtn.addEventListener('click', function() {
 
 //...
 fourBtn.addEventListener('click', function() {
-    let displayValue = display.textContent = "4";
+    let displayValue = display.textContent += "4";
     console.log(displayValue);
 })
 
 fiveBtn.addEventListener('click', function() {
-    let displayValue = display.textContent = "5";
+    let displayValue = display.textContent += "5";
     console.log(displayValue);
 })
 
 sixBtn.addEventListener('click', function() {
-    let displayValue = display.textContent = "6";
+    let displayValue = display.textContent += "6";
     console.log(displayValue);
 })
 
@@ -129,17 +134,17 @@ subtractBtn.addEventListener('click', function() {
 
 //...
 oneBtn.addEventListener('click', function() {
-    let displayValue = display.textContent = "1";
+    let displayValue = display.textContent += "1";
     console.log(displayValue);
 })
 
 twoBtn.addEventListener('click', function() {
-    let displayValue = display.textContent = "2";
+    let displayValue = display.textContent += "2";
     console.log(displayValue);
 })
 
 threeBtn.addEventListener('click', function() {
-    let displayValue = display.textContent = "3";
+    let displayValue = display.textContent += "3";
     console.log(displayValue);
 })
 
@@ -150,12 +155,12 @@ addBtn.addEventListener('click', function() {
 
 //...
 zeroBtn.addEventListener('click', function() {
-    let displayValue = display.textContent = "0";
+    let displayValue = display.textContent += "0";
     console.log(displayValue);
 })
 
 decimalBtn.addEventListener('click', function() {
-    let displayValue = display.textContent = ".";
+    let displayValue = display.textContent += ".";
     console.log(displayValue);
 })
 
