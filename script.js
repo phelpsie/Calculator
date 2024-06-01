@@ -25,14 +25,14 @@ function divide(a,b) {
 }
 
 //Operate Function
-function operate(operator, firstOperand, secondOperand) {
+function operate() {
     if (operator === '+') {
-        return add(firstOperand, secondOperand);
+        display.textContent = (add(Number(firstOperand), Number(secondOperand)));
     } else if (operator === '-') {
-        return subtract(firstOperand, secondOperand);
+        display.textContent = (subtract(Number(firstOperand), Number(secondOperand)));
     } else if (operator === '*') {
-        return multiply(firstOperand, secondOperand);
-    } else return divide(firstOperand, secondOperand);
+        display.textContent = (multiply(Number(firstOperand), Number(secondOperand)));
+    } else display.textContent = (divide(Number(firstOperand), Number(secondOperand)));
     }
 
 
@@ -229,17 +229,11 @@ decimalBtn.addEventListener('click', function() {
     console.log(displayValue);
 })
 
-equalsBtn.addEventListener('click', function () {
-        if (operator === '+') {
-            display.textContent = (add(Number(firstOperand), Number(secondOperand)));
-        } else if (operator === '-') {
-            display.textContent = (subtract(Number(firstOperand), Number(secondOperand)));
-        } else if (operator === '*') {
-            display.textContent = (multiply(Number(firstOperand), Number(secondOperand)));
-        } else display.textContent = (divide(Number(firstOperand), Number(secondOperand)));
-        })
+equalsBtn.addEventListener('click', operate);
 
 
 
-
+//Next steps:
+//  1. Make Operate function itself useable on equalBtn click event (MAKE SURE TO UPDATE OPERATE FUNCTION WITH THE NEWLY ADDED DISPLAY.TEXTcONTENT AND NUMBER() ADDITIONS))!!!
+//  2. Make zero button irrepeatable if number starts with it
 
