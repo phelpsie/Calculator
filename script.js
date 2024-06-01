@@ -82,10 +82,7 @@ let equalsBtn = document.querySelector('.equals');
 
 //Top to Bottom:...
 clearBtn.addEventListener('click', function() {
-     display.textContent = "";
-     let firstOperand = 0;
-     let operator = undefined;
-     let secondOperand = 0;
+     location.reload();
 })
 
 divideBtn.addEventListener('click', function () {
@@ -214,11 +211,11 @@ addBtn.addEventListener('click', function() {
 zeroBtn.addEventListener('click', function() {
     if(operator === undefined) {
         firstOperand = display.textContent += 0;
-         console.log(`first try: ${firstOperand.trim()} and ${secondOperand}`);
+        console.log(`first try: ${firstOperand.trim()} and ${secondOperand}`);
      } else {
-         display.textContent = secondOperand;
-         secondOperand = display.textContent += 0;
-         console.log(`second try: ${firstOperand.trim()} and ${secondOperand}`);
+        display.textContent = secondOperand;
+        secondOperand = display.textContent += 0;
+        console.log(`second try: ${firstOperand.trim()} and ${secondOperand}`);
      }
 })
 
@@ -234,6 +231,6 @@ equalsBtn.addEventListener('click', operate);
 
 
 //Next steps:
-//  1. Make Operate function itself useable on equalBtn click event (MAKE SURE TO UPDATE OPERATE FUNCTION WITH THE NEWLY ADDED DISPLAY.TEXTcONTENT AND NUMBER() ADDITIONS))!!!
+//  (CHECK) 1. Make Operate function itself useable on equalBtn click event (MAKE SURE TO UPDATE OPERATE FUNCTION WITH THE NEWLY ADDED DISPLAY.TEXTcONTENT AND NUMBER() ADDITIONS))!!!
 //  2. Make zero button irrepeatable if number starts with it
 
