@@ -59,8 +59,16 @@ button {
     background-color: orange;
 }
 
+.operator:active {
+    background-color: bisque;
+}
+
 .num {
     background-color:grey;
+}
+
+.num:active {
+    background-color: gainsboro;
 }
 
 .zero {
@@ -72,4 +80,8 @@ button {
 
 .clear, .plus-minus, .percent {
     color: black;
+}
+
+.clear:active, .plus-minus:active, .percent:active {
+    background-color: darkgray;
 }
