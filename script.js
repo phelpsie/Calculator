@@ -213,12 +213,12 @@ addBtn.addEventListener('click', function() {
 //...
 zeroBtn.addEventListener('click', function() {
     if(operator === undefined) {
-        firstOperand = display.textContent += 0;
-         console.log(`first try: ${firstOperand.trim()} and ${secondOperand}`);
+        firstOperand = display.textContent = 0;
+         console.log(`first try: ${firstOperand} and ${secondOperand}`);
      } else {
          display.textContent = secondOperand;
-         secondOperand = display.textContent += 0;
-         console.log(`second try: ${firstOperand.trim()} and ${secondOperand}`);
+         secondOperand = display.textContent = 0;
+         console.log(`second try: ${firstOperand} and ${secondOperand}`);
      }
 })
 
