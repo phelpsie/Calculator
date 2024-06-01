@@ -128,8 +128,8 @@ nineBtn.addEventListener('click', function() {
 })
 
 multiplyBtn.addEventListener('click', function() {
-    let displayValue = display.textContent = "x";
-    console.log(displayValue);
+    operator = '*';
+    console.log(operator);
 })
 
 //...
@@ -167,8 +167,8 @@ sixBtn.addEventListener('click', function() {
 })
 
 subtractBtn.addEventListener('click', function() {
-    let displayValue = display.textContent = "-";
-    console.log(displayValue);
+    operator = '-';
+    console.log(operator);
 })
 
 //...
@@ -206,8 +206,8 @@ threeBtn.addEventListener('click', function() {
 })
 
 addBtn.addEventListener('click', function() {
-    let displayValue = display.textContent = "+";
-    console.log(displayValue);
+    operator = '+';
+    console.log(operator);
 })
 
 //...
