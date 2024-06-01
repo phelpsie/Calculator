@@ -24,11 +24,6 @@ function divide(a,b) {
     return a / b;
 }
 
-let a = 10;
-let b = 5;
-
-console.log(add(a,b), subtract(a,b), multiply(a,b), divide(a,b));
-
 //Operate Function
 function operate(operator, firstOperand, secondOperand) {
     if (operator === '+') {
@@ -39,8 +34,6 @@ function operate(operator, firstOperand, secondOperand) {
         return multiply(firstOperand, secondOperand);
     } else return divide(firstOperand, secondOperand);
     }
-
-console.log(operate('-', 10, 20));
 
 
 //Query Selectors
@@ -80,30 +73,58 @@ let equalsBtn = document.querySelector('.equals');
 
 //Event Listeners
 
+//if display = "", firstOperand = display.textContent += ...
+// else if (operator !== undefined) secondOperand = display.textContent += ...
+
+//FOR OPERATORS, do operator variable assignment only, dont update the display
+
+//Equals calls the Operate function with standard params
+
+//Top to Bottom:...
 clearBtn.addEventListener('click', function() {
-    let displayValue = display.textContent = "";
-    console.log(displayValue);
+     display.textContent = "";
+     let firstOperand = 0;
+     let operator = undefined;
+     let secondOperand = 0;
 })
 
 divideBtn.addEventListener('click', function () {
-    let displayValue = display.textContent = "/";
-    console.log(displayValue);
+    operator = '/';
+    console.log(operator);
 })
 
 //...
 sevenBtn.addEventListener('click', function() {
-    let displayValue = display.textContent += "7";
-    console.log(displayValue);
+    if(operator === undefined) {
+       firstOperand = display.textContent += 7;
+        console.log(`first try: ${firstOperand.trim()} and ${secondOperand}`);
+    } else {
+        display.textContent = secondOperand;
+        secondOperand = display.textContent += 7;
+        console.log(`second try: ${firstOperand.trim()} and ${secondOperand}`);
+    }
 })
 
 eightBtn.addEventListener('click', function() {
-    let displayValue = display.textContent += "8";
-    console.log(displayValue);
+    if(operator === undefined) {
+        firstOperand = display.textContent += 8;
+         console.log(`first try: ${firstOperand.trim()} and ${secondOperand}`);
+     } else {
+         display.textContent = secondOperand;
+         secondOperand = display.textContent += 8;
+         console.log(`second try: ${firstOperand.trim()} and ${secondOperand}`);
+     }
 })
 
 nineBtn.addEventListener('click', function() {
-    let displayValue = display.textContent += "9";
-    console.log(displayValue);
+    if(operator === undefined) {
+        firstOperand = display.textContent += 9;
+         console.log(`first try: ${firstOperand.trim()} and ${secondOperand}`);
+     } else {
+         display.textContent = secondOperand;
+         secondOperand = display.textContent += 9;
+         console.log(`second try: ${firstOperand.trim()} and ${secondOperand}`);
+     }
 })
 
 multiplyBtn.addEventListener('click', function() {
@@ -113,18 +134,36 @@ multiplyBtn.addEventListener('click', function() {
 
 //...
 fourBtn.addEventListener('click', function() {
-    let displayValue = display.textContent += "4";
-    console.log(displayValue);
+    if(operator === undefined) {
+        firstOperand = display.textContent += 4;
+         console.log(`first try: ${firstOperand.trim()} and ${secondOperand}`);
+     } else {
+         display.textContent = secondOperand;
+         secondOperand = display.textContent += 4;
+         console.log(`second try: ${firstOperand.trim()} and ${secondOperand}`);
+     }
 })
 
 fiveBtn.addEventListener('click', function() {
-    let displayValue = display.textContent += "5";
-    console.log(displayValue);
+    if(operator === undefined) {
+        firstOperand = display.textContent += 5;
+         console.log(`first try: ${firstOperand.trim()} and ${secondOperand}`);
+     } else {
+         display.textContent = secondOperand;
+         secondOperand = display.textContent += 5;
+         console.log(`second try: ${firstOperand.trim()} and ${secondOperand}`);
+     }
 })
 
 sixBtn.addEventListener('click', function() {
-    let displayValue = display.textContent += "6";
-    console.log(displayValue);
+    if(operator === undefined) {
+        firstOperand = display.textContent += 6;
+         console.log(`first try: ${firstOperand.trim()} and ${secondOperand}`);
+     } else {
+         display.textContent = secondOperand;
+         secondOperand = display.textContent += 6;
+         console.log(`second try: ${firstOperand.trim()} and ${secondOperand}`);
+     }
 })
 
 subtractBtn.addEventListener('click', function() {
@@ -134,18 +173,36 @@ subtractBtn.addEventListener('click', function() {
 
 //...
 oneBtn.addEventListener('click', function() {
-    let displayValue = display.textContent += "1";
-    console.log(displayValue);
+    if(operator === undefined) {
+        firstOperand = display.textContent += 1;
+         console.log(`first try: ${firstOperand.trim()} and ${secondOperand}`);
+     } else {
+         display.textContent = secondOperand;
+         secondOperand = display.textContent += 1;
+         console.log(`second try: ${firstOperand.trim()} and ${secondOperand}`);
+     }
 })
 
 twoBtn.addEventListener('click', function() {
-    let displayValue = display.textContent += "2";
-    console.log(displayValue);
+    if(operator === undefined) {
+        firstOperand = display.textContent += 2;
+         console.log(`first try: ${firstOperand.trim()} and ${secondOperand}`);
+     } else {
+         display.textContent = secondOperand;
+         secondOperand = display.textContent += 2;
+         console.log(`second try: ${firstOperand.trim()} and ${secondOperand}`);
+     }
 })
 
 threeBtn.addEventListener('click', function() {
-    let displayValue = display.textContent += "3";
-    console.log(displayValue);
+    if(operator === undefined) {
+        firstOperand = display.textContent += 3;
+         console.log(`first try: ${firstOperand.trim()} and ${secondOperand}`);
+     } else {
+         display.textContent = secondOperand;
+         secondOperand = display.textContent += 3;
+         console.log(`second try: ${firstOperand.trim()} and ${secondOperand}`);
+     }
 })
 
 addBtn.addEventListener('click', function() {
@@ -155,8 +212,14 @@ addBtn.addEventListener('click', function() {
 
 //...
 zeroBtn.addEventListener('click', function() {
-    let displayValue = display.textContent += "0";
-    console.log(displayValue);
+    if(operator === undefined) {
+        firstOperand = display.textContent += 0;
+         console.log(`first try: ${firstOperand.trim()} and ${secondOperand}`);
+     } else {
+         display.textContent = secondOperand;
+         secondOperand = display.textContent += 0;
+         console.log(`second try: ${firstOperand.trim()} and ${secondOperand}`);
+     }
 })
 
 decimalBtn.addEventListener('click', function() {
