@@ -213,12 +213,12 @@ addBtn.addEventListener('click', function() {
 //...
 zeroBtn.addEventListener('click', function() {
     if(operator === undefined) {
-        firstOperand = display.textContent = 0;
-         console.log(`first try: ${firstOperand} and ${secondOperand}`);
+        firstOperand = display.textContent += 0;
+         console.log(`first try: ${firstOperand.trim()} and ${secondOperand}`);
      } else {
          display.textContent = secondOperand;
-         secondOperand = display.textContent = 0;
-         console.log(`second try: ${firstOperand} and ${secondOperand}`);
+         secondOperand = display.textContent += 0;
+         console.log(`second try: ${firstOperand.trim()} and ${secondOperand}`);
      }
 })
 
@@ -229,6 +229,15 @@ decimalBtn.addEventListener('click', function() {
     console.log(displayValue);
 })
 
+equalsBtn.addEventListener('click', function () {
+        if (operator === '+') {
+            display.textContent = (add(Number(firstOperand), Number(secondOperand)));
+        } else if (operator === '-') {
+            display.textContent = (subtract(Number(firstOperand), Number(secondOperand)));
+        } else if (operator === '*') {
+            display.textContent = (multiply(Number(firstOperand), Number(secondOperand)));
+        } else display.textContent = (divide(Number(firstOperand), Number(secondOperand)));
+        })
 
 
 
