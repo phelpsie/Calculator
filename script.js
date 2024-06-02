@@ -108,6 +108,16 @@ plusminusBtn.addEventListener('click', function() {
     }
 })
 
+percentBtn.addEventListener('click', function() {
+    if(secondOperand === undefined) {
+        firstOperand /= 100;
+        display.textContent = firstOperand;
+    } else if(display.textContent = secondOperand) {
+        secondOperand /= 100;
+        display.textContent = secondOperand;
+    }
+})
+
 divideBtn.addEventListener('click', function () {
     if(secondOperand !== undefined) {
         display.textContent = operate();
