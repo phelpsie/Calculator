@@ -6,22 +6,22 @@ let secondOperand;
 
 //Calculation Functions
 function add(a, b) {
-    return a + b;
+    return (a + b).toFixed(3);
 }
 
 function subtract(a,b) {
-    return a - b;
+    return (a - b).toFixed(3);
 }
 
 function multiply(a,b) {
-    return a * b;
+    return (a * b).toFixed(3);
 }
 
 function divide(a,b) {
     if(b === 0) {
         return "nope";
     }
-    return a / b;
+    return (a / b).toFixed(3);
 }
 
 //Operate Function
