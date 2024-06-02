@@ -252,7 +252,6 @@ decimalBtn.addEventListener('click', function() {
         firstOperand = display.textContent += '.';
         console.log(`first try: ${firstOperand} and ${secondOperand}`);
      } else {
-        let check = '.';
         if(!display.textContent.includes('.'))
             secondOperand = display.textContent += '.';
             console.log(`second try: ${firstOperand} and ${secondOperand}`);
