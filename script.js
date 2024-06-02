@@ -76,13 +76,6 @@ let equalsBtn = document.querySelector('.equals');
 
 //Event Listeners
 
-//if display = "", firstOperand = display.textContent += ...
-// else if (operator !== undefined) secondOperand = display.textContent += ...
-
-//FOR OPERATORS, do operator variable assignment only, dont update the display
-
-//Equals calls the Operate function with standard params
-
 //Top to Bottom:...
 clearBtn.addEventListener('click', function() {
      location.reload();
@@ -262,17 +255,3 @@ decimalBtn.addEventListener('click', function() {
 equalsBtn.addEventListener('click', function () {
     display.textContent = operate();
 });
-
-
-
-//Next steps:
-//  (CHECK) 1. Make Operate function itself useable on equalBtn click event (MAKE SURE TO UPDATE OPERATE FUNCTION WITH THE NEWLY ADDED DISPLAY.TEXTcONTENT AND NUMBER() ADDITIONS))!!!
-//  2. Make zero button irrepeatable if number starts with it
-
-// = is good for all cases where 0 comes first,
-
-// += is good for all cases were zero comes after a 1-9 digit
-
-// if firstOperand.charAt(0) = 1 || through 9 (...ENTIRE system follows with +=) ELSE (entire system follows with =)
-
-
