@@ -1,6 +1,3 @@
-let displayValue;
-
-
 //Calculator Equation Variables
 let firstOperand;
 let operator;
@@ -94,33 +91,27 @@ divideBtn.addEventListener('click', function () {
 sevenBtn.addEventListener('click', function() {
     if(operator === undefined) {
        firstOperand = display.textContent += 7;
-        console.log(`first try: ${firstOperand.trim()} and ${secondOperand}`);
     } else {
         display.textContent = secondOperand;
         secondOperand = display.textContent += 7;
-        console.log(`second try: ${firstOperand.trim()} and ${secondOperand}`);
     }
 })
 
 eightBtn.addEventListener('click', function() {
     if(operator === undefined) {
         firstOperand = display.textContent += 8;
-         console.log(`first try: ${firstOperand.trim()} and ${secondOperand}`);
      } else {
          display.textContent = secondOperand;
          secondOperand = display.textContent += 8;
-         console.log(`second try: ${firstOperand.trim()} and ${secondOperand}`);
      }
 })
 
 nineBtn.addEventListener('click', function() {
     if(operator === undefined) {
         firstOperand = display.textContent += 9;
-         console.log(`first try: ${firstOperand.trim()} and ${secondOperand}`);
      } else {
          display.textContent = secondOperand;
          secondOperand = display.textContent += 9;
-         console.log(`second try: ${firstOperand.trim()} and ${secondOperand}`);
      }
 })
 
@@ -137,33 +128,27 @@ multiplyBtn.addEventListener('click', function() {
 fourBtn.addEventListener('click', function() {
     if(operator === undefined) {
         firstOperand = display.textContent += 4;
-         console.log(`first try: ${firstOperand.trim()} and ${secondOperand}`);
      } else {
          display.textContent = secondOperand;
          secondOperand = display.textContent += 4;
-         console.log(`second try: ${firstOperand.trim()} and ${secondOperand}`);
      }
 })
 
 fiveBtn.addEventListener('click', function() {
     if(operator === undefined) {
         firstOperand = display.textContent += 5;
-         console.log(`first try: ${firstOperand.trim()} and ${secondOperand}`);
      } else {
          display.textContent = secondOperand;
          secondOperand = display.textContent += 5;
-         console.log(`second try: ${firstOperand.trim()} and ${secondOperand}`);
      }
 })
 
 sixBtn.addEventListener('click', function() {
     if(operator === undefined) {
         firstOperand = display.textContent += 6;
-         console.log(`first try: ${firstOperand.trim()} and ${secondOperand}`);
      } else {
          display.textContent = secondOperand;
          secondOperand = display.textContent += 6;
-         console.log(`second try: ${firstOperand.trim()} and ${secondOperand}`);
      }
 })
 
@@ -180,33 +165,27 @@ subtractBtn.addEventListener('click', function() {
 oneBtn.addEventListener('click', function() {
     if(operator === undefined) {
         firstOperand = display.textContent += 1;
-         console.log(`first try: ${firstOperand.trim()} and ${secondOperand}`);
      } else {
          display.textContent = secondOperand;
          secondOperand = display.textContent += 1;
-         console.log(`second try: ${firstOperand.trim()} and ${secondOperand}`);
      }
 })
 
 twoBtn.addEventListener('click', function() {
     if(operator === undefined) {
         firstOperand = display.textContent += 2;
-         console.log(`first try: ${firstOperand.trim()} and ${secondOperand}`);
      } else {
          display.textContent = secondOperand;
          secondOperand = display.textContent += 2;
-         console.log(`second try: ${firstOperand.trim()} and ${secondOperand}`);
      }
 })
 
 threeBtn.addEventListener('click', function() {
     if(operator === undefined) {
         firstOperand = display.textContent += 3;
-         console.log(`first try: ${firstOperand} and ${secondOperand}`);
      } else {
          display.textContent = secondOperand;
          secondOperand = display.textContent += 3;
-         console.log(`second try: ${firstOperand} and ${secondOperand}`);
      }
 })
 
@@ -222,12 +201,10 @@ addBtn.addEventListener('click', function() {
 //...
 zeroBtn.addEventListener('click', function() {
     if(operator === undefined) {
-        console.log(`${firstOperand} ${secondOperand}`);
         if(firstOperand === undefined || firstOperand === 0) {
             firstOperand = display.textContent = 0;
         } else {
             firstOperand = display.textContent += 0;
-            console.log(`first try: ${firstOperand} and ${secondOperand}`);
         }
      } else {
         if(secondOperand === undefined || secondOperand === 0) {
@@ -235,7 +212,6 @@ zeroBtn.addEventListener('click', function() {
         } else {
             secondOperand = display.textContent += 0;
         }
-        console.log(`second try: ${firstOperand} and ${secondOperand}`);
      }
 })
 
@@ -243,11 +219,9 @@ decimalBtn.addEventListener('click', function() {
     if(operator === undefined) {
         if(secondOperand === undefined && !display.textContent.includes('.'))
         firstOperand = display.textContent += '.';
-        console.log(`first try: ${firstOperand} and ${secondOperand}`);
      } else {
         if(!display.textContent.includes('.'))
             secondOperand = display.textContent += '.';
-            console.log(`second try: ${firstOperand} and ${secondOperand}`);
         }
      }
     );
