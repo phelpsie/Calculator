@@ -229,21 +229,36 @@ addBtn.addEventListener('click', function() {
 //...
 zeroBtn.addEventListener('click', function() {
     if(operator === undefined) {
-        firstOperand = display.textContent += 0;
-        console.log(`first try: ${firstOperand} and ${secondOperand}`);
+        console.log(`${firstOperand} ${secondOperand}`);
+        if(firstOperand === undefined || firstOperand === 0) {
+            firstOperand = display.textContent = 0;
+        } else {
+            firstOperand = display.textContent += 0;
+            console.log(`first try: ${firstOperand} and ${secondOperand}`);
+        }
      } else {
-        display.textContent = secondOperand;
-        secondOperand = display.textContent += 0;
+        if(secondOperand === undefined || secondOperand === 0) {
+            secondOperand = display.textContent = 0;
+        } else {
+            secondOperand = display.textContent += 0;
+        }
         console.log(`second try: ${firstOperand} and ${secondOperand}`);
      }
 })
 
 decimalBtn.addEventListener('click', function() {
-    if (!display.textContent.includes('.')) {
-        let displayValue = display.textContent += ".";
-    } else return displayValue;
-    console.log(displayValue);
-})
+    if(operator === undefined) {
+        if(secondOperand === undefined && !display.textContent.includes('.'))
+        firstOperand = display.textContent += '.';
+        console.log(`first try: ${firstOperand} and ${secondOperand}`);
+     } else {
+        let check = '.';
+        if(!display.textContent.includes('.'))
+            secondOperand = display.textContent += '.';
+            console.log(`second try: ${firstOperand} and ${secondOperand}`);
+        }
+     }
+    );
 
 equalsBtn.addEventListener('click', function () {
     display.textContent = operate();
