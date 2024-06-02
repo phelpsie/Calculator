@@ -98,6 +98,16 @@ clearBtn.addEventListener('click', function() {
      location.reload();
 })
 
+plusminusBtn.addEventListener('click', function() {
+    if(secondOperand === undefined) {
+        firstOperand *= -1;
+        display.textContent = firstOperand;
+    } else if (display.textContent === secondOperand) {
+        secondOperand *= -1;
+        display.textContent = secondOperand;
+    }
+})
+
 divideBtn.addEventListener('click', function () {
     if(secondOperand !== undefined) {
         display.textContent = operate();
