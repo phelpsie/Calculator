@@ -27,12 +27,12 @@ function divide(a,b) {
 //Operate Function
 function operate() {
     if (operator === '+') {
-        display.textContent = (add(Number(firstOperand), Number(secondOperand)));
+        return (add(Number(firstOperand), Number(secondOperand)));
     } else if (operator === '-') {
-        display.textContent = (subtract(Number(firstOperand), Number(secondOperand)));
+        return (subtract(Number(firstOperand), Number(secondOperand)));
     } else if (operator === '*') {
-        display.textContent = (multiply(Number(firstOperand), Number(secondOperand)));
-    } else display.textContent = (divide(Number(firstOperand), Number(secondOperand)));
+        return (multiply(Number(firstOperand), Number(secondOperand)));
+    } else return (divide(Number(firstOperand), Number(secondOperand)));
     }
 
 
@@ -86,8 +86,12 @@ clearBtn.addEventListener('click', function() {
 })
 
 divideBtn.addEventListener('click', function () {
+    if(secondOperand !== undefined) {
+        display.textContent = operate();
+        firstOperand = operate();
+        secondOperand = undefined;
+    }
     operator = '/';
-    console.log(operator);
 })
 
 //...
@@ -125,8 +129,12 @@ nineBtn.addEventListener('click', function() {
 })
 
 multiplyBtn.addEventListener('click', function() {
+    if(secondOperand !== undefined) {
+        display.textContent = operate();
+        firstOperand = operate();
+        secondOperand = undefined;
+    }
     operator = '*';
-    console.log(operator);
 })
 
 //...
@@ -164,8 +172,12 @@ sixBtn.addEventListener('click', function() {
 })
 
 subtractBtn.addEventListener('click', function() {
+    if(secondOperand !== undefined) {
+        display.textContent = operate();
+        firstOperand = operate();
+        secondOperand = undefined;
+    }
     operator = '-';
-    console.log(operator);
 })
 
 //...
@@ -194,28 +206,32 @@ twoBtn.addEventListener('click', function() {
 threeBtn.addEventListener('click', function() {
     if(operator === undefined) {
         firstOperand = display.textContent += 3;
-         console.log(`first try: ${firstOperand.trim()} and ${secondOperand}`);
+         console.log(`first try: ${firstOperand} and ${secondOperand}`);
      } else {
          display.textContent = secondOperand;
          secondOperand = display.textContent += 3;
-         console.log(`second try: ${firstOperand.trim()} and ${secondOperand}`);
+         console.log(`second try: ${firstOperand} and ${secondOperand}`);
      }
 })
 
 addBtn.addEventListener('click', function() {
+    if(secondOperand !== undefined) {
+        display.textContent = operate();
+        firstOperand = operate();
+        secondOperand = undefined;
+    }
     operator = '+';
-    console.log(operator);
 })
 
 //...
 zeroBtn.addEventListener('click', function() {
     if(operator === undefined) {
         firstOperand = display.textContent += 0;
-        console.log(`first try: ${firstOperand.trim()} and ${secondOperand}`);
+        console.log(`first try: ${firstOperand} and ${secondOperand}`);
      } else {
         display.textContent = secondOperand;
         secondOperand = display.textContent += 0;
-        console.log(`second try: ${firstOperand.trim()} and ${secondOperand}`);
+        console.log(`second try: ${firstOperand} and ${secondOperand}`);
      }
 })
 
@@ -226,11 +242,20 @@ decimalBtn.addEventListener('click', function() {
     console.log(displayValue);
 })
 
-equalsBtn.addEventListener('click', operate);
+equalsBtn.addEventListener('click', function () {
+    display.textContent = operate();
+});
 
 
 
 //Next steps:
 //  (CHECK) 1. Make Operate function itself useable on equalBtn click event (MAKE SURE TO UPDATE OPERATE FUNCTION WITH THE NEWLY ADDED DISPLAY.TEXTcONTENT AND NUMBER() ADDITIONS))!!!
 //  2. Make zero button irrepeatable if number starts with it
+
+// = is good for all cases where 0 comes first,
+
+// += is good for all cases were zero comes after a 1-9 digit
+
+// if firstOperand.charAt(0) = 1 || through 9 (...ENTIRE system follows with +=) ELSE (entire system follows with =)
+
 
