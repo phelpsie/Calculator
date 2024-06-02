@@ -21,6 +21,9 @@ function multiply(a,b) {
 }
 
 function divide(a,b) {
+    if(b === 0) {
+        return "nope";
+    }
     return a / b;
 }
 
