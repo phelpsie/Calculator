@@ -6,22 +6,42 @@ let secondOperand;
 
 //Calculation Functions
 function add(a, b) {
-    return (a + b).toFixed(3);
+    let floatNumber = a + b;
+    if (floatNumber > 99999999999) {
+        return "# is too large";
+    } else {
+    return Math.round(floatNumber*100)/100;
+    }
 }
 
 function subtract(a,b) {
-    return (a - b).toFixed(3);
+    let floatNumber = a - b;
+    if (floatNumber > 99999999999) {
+        return "# is too large";
+    } else {
+    return Math.round(floatNumber*100)/100;
+    }
 }
 
 function multiply(a,b) {
-    return (a * b).toFixed(3);
+    let floatNumber = a * b;
+    if (floatNumber > 99999999999) {
+        return "# is too large";
+    } else {
+    return Math.round(floatNumber*100)/100;
+    }
 }
 
 function divide(a,b) {
     if(b === 0) {
         return "nope";
     }
-    return (a / b).toFixed(3);
+    let floatNumber = a / b;
+    if (floatNumber > 99999999999) {
+        return "# is too large";
+    } else {
+    return Math.round(floatNumber*100)/100;
+    }
 }
 
 //Operate Function
