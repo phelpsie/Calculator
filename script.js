@@ -2,6 +2,7 @@
 let firstOperand;
 let operator;
 let secondOperand;
+let toggle = "inactive";
 
 
 //Calculation Functions
@@ -109,7 +110,9 @@ plusminusBtn.addEventListener('click', function() {
 })
 
 percentBtn.addEventListener('click', function() {
-    if(secondOperand === undefined) {
+    if (toggle === "active") {
+        display.textContent /= 100;
+    } else if(secondOperand === undefined) {
         firstOperand /= 100;
         display.textContent = firstOperand;
     } else if(display.textContent = secondOperand) {
@@ -268,4 +271,5 @@ decimalBtn.addEventListener('click', function() {
 
 equalsBtn.addEventListener('click', function () {
     display.textContent = operate();
+    toggle = "active";
 });
