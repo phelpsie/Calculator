@@ -99,6 +99,12 @@ clearBtn.addEventListener('click', function() {
      location.reload();
 })
 
+window.addEventListener('keydown', (e) => {
+    if (e.key == "Backspace") {
+        location.reload();
+    }
+})
+
 plusminusBtn.addEventListener('click', function() {
     if(secondOperand === undefined) {
         firstOperand *= -1;
@@ -108,6 +114,7 @@ plusminusBtn.addEventListener('click', function() {
         display.textContent = secondOperand;
     }
 })
+
 
 percentBtn.addEventListener('click', function() {
     if (toggle === "active") {
@@ -121,13 +128,38 @@ percentBtn.addEventListener('click', function() {
     }
 })
 
+window.addEventListener('keydown', (e) => {
+    if(e.key == "%") {
+        if (toggle === "active") {
+            display.textContent /= 100;
+        } else if(secondOperand === undefined) {
+            firstOperand /= 100;
+            display.textContent = firstOperand;
+        } else if(display.textContent = secondOperand) {
+            secondOperand /= 100;
+            display.textContent = secondOperand;
+        } 
+}
+})
+
 divideBtn.addEventListener('click', function () {
     if(secondOperand !== undefined) {
         display.textContent = operate();
         firstOperand = operate();
         secondOperand = undefined;
     }
-    operator = '/';
+    operator = "/";
+})
+
+window.addEventListener('keydown', (e) => {
+    if(e.key == "/") {
+        if(secondOperand !== undefined) {
+            display.textContent = operate();
+            firstOperand = operate();
+            secondOperand = undefined;
+        }
+        operator = '/';
+}
 })
 
 //...
@@ -140,6 +172,17 @@ sevenBtn.addEventListener('click', function() {
     }
 })
 
+window.addEventListener('keydown', (e) => {
+    if(e.key == 7) {
+        if(operator === undefined) {
+            firstOperand = display.textContent += 7;
+         } else {
+             display.textContent = secondOperand;
+             secondOperand = display.textContent += 7;
+         }
+    }
+})
+
 eightBtn.addEventListener('click', function() {
     if(operator === undefined) {
         firstOperand = display.textContent += 8;
@@ -147,6 +190,17 @@ eightBtn.addEventListener('click', function() {
          display.textContent = secondOperand;
          secondOperand = display.textContent += 8;
      }
+})
+
+window.addEventListener('keydown', (e) => {
+    if(e.key == 8) {
+        if(operator === undefined) {
+            firstOperand = display.textContent += 8;
+         } else {
+             display.textContent = secondOperand;
+             secondOperand = display.textContent += 8;
+         }
+    }
 })
 
 nineBtn.addEventListener('click', function() {
@@ -158,6 +212,17 @@ nineBtn.addEventListener('click', function() {
      }
 })
 
+window.addEventListener('keydown', (e) => {
+    if(e.key == 9) {
+        if(operator === undefined) {
+            firstOperand = display.textContent += 9;
+         } else {
+             display.textContent = secondOperand;
+             secondOperand = display.textContent += 9;
+         }
+    }
+})
+
 multiplyBtn.addEventListener('click', function() {
     if(secondOperand !== undefined) {
         display.textContent = operate();
@@ -165,6 +230,17 @@ multiplyBtn.addEventListener('click', function() {
         secondOperand = undefined;
     }
     operator = '*';
+})
+
+window.addEventListener('keydown', (e) => {
+    if(e.key == "*") {
+        if(secondOperand !== undefined) {
+            display.textContent = operate();
+            firstOperand = operate();
+            secondOperand = undefined;
+        }
+        operator = '*';
+}
 })
 
 //...
@@ -177,6 +253,17 @@ fourBtn.addEventListener('click', function() {
      }
 })
 
+window.addEventListener('keydown', (e) => {
+    if(e.key == 4) {
+        if(operator === undefined) {
+            firstOperand = display.textContent += 4;
+         } else {
+             display.textContent = secondOperand;
+             secondOperand = display.textContent += 4;
+         }
+    }
+})
+
 fiveBtn.addEventListener('click', function() {
     if(operator === undefined) {
         firstOperand = display.textContent += 5;
@@ -184,6 +271,17 @@ fiveBtn.addEventListener('click', function() {
          display.textContent = secondOperand;
          secondOperand = display.textContent += 5;
      }
+})
+
+window.addEventListener('keydown', (e) => {
+    if(e.key == 5) {
+        if(operator === undefined) {
+            firstOperand = display.textContent += 5;
+         } else {
+             display.textContent = secondOperand;
+             secondOperand = display.textContent += 5;
+         }
+    }
 })
 
 sixBtn.addEventListener('click', function() {
@@ -195,6 +293,17 @@ sixBtn.addEventListener('click', function() {
      }
 })
 
+window.addEventListener('keydown', (e) => {
+    if(e.key == 6) {
+        if(operator === undefined) {
+            firstOperand = display.textContent += 6;
+         } else {
+             display.textContent = secondOperand;
+             secondOperand = display.textContent += 6;
+         }
+    }
+})
+
 subtractBtn.addEventListener('click', function() {
     if(secondOperand !== undefined) {
         display.textContent = operate();
@@ -203,6 +312,18 @@ subtractBtn.addEventListener('click', function() {
     }
     operator = '-';
 })
+
+window.addEventListener('keydown', (e) => {
+    if(e.key == "-") {
+        if(secondOperand !== undefined) {
+            display.textContent = operate();
+            firstOperand = operate();
+            secondOperand = undefined;
+        }
+        operator = '-';
+}
+})
+
 
 //...
 oneBtn.addEventListener('click', function() {
@@ -214,6 +335,17 @@ oneBtn.addEventListener('click', function() {
      }
 })
 
+window.addEventListener('keydown', (e) => {
+    if(e.key == 1) {
+        if(operator === undefined) {
+            firstOperand = display.textContent += 1;
+         } else {
+             display.textContent = secondOperand;
+             secondOperand = display.textContent += 1;
+         }
+    }
+})
+
 twoBtn.addEventListener('click', function() {
     if(operator === undefined) {
         firstOperand = display.textContent += 2;
@@ -221,6 +353,17 @@ twoBtn.addEventListener('click', function() {
          display.textContent = secondOperand;
          secondOperand = display.textContent += 2;
      }
+})
+
+window.addEventListener('keydown', (e) => {
+    if(e.key == 2) {
+        if(operator === undefined) {
+            firstOperand = display.textContent += 2;
+         } else {
+             display.textContent = secondOperand;
+             secondOperand = display.textContent += 2;
+         }
+    }
 })
 
 threeBtn.addEventListener('click', function() {
@@ -232,6 +375,17 @@ threeBtn.addEventListener('click', function() {
      }
 })
 
+window.addEventListener('keydown', (e) => {
+    if(e.key == 3) {
+        if(operator === undefined) {
+            firstOperand = display.textContent += 3;
+         } else {
+             display.textContent = secondOperand;
+             secondOperand = display.textContent += 3;
+         }
+    }
+})
+
 addBtn.addEventListener('click', function() {
     if(secondOperand !== undefined) {
         display.textContent = operate();
@@ -239,6 +393,17 @@ addBtn.addEventListener('click', function() {
         secondOperand = undefined;
     }
     operator = '+';
+})
+
+window.addEventListener('keydown', (e) => {
+    if(e.key == "+") {
+        if(secondOperand !== undefined) {
+            display.textContent = operate();
+            firstOperand = operate();
+            secondOperand = undefined;
+        }
+        operator = '+';
+    }
 })
 
 //...
@@ -258,6 +423,24 @@ zeroBtn.addEventListener('click', function() {
      }
 })
 
+window.addEventListener('keydown', (e) => {
+    if(e.key == 0) {
+        if(operator === undefined) {
+            if(firstOperand === undefined || firstOperand === 0) {
+                firstOperand = display.textContent = 0;
+            } else {
+                firstOperand = display.textContent += 0;
+            }
+         } else {
+            if(secondOperand === undefined || secondOperand === 0) {
+                secondOperand = display.textContent = 0;
+            } else {
+                secondOperand = display.textContent += 0;
+            }
+         }
+    }
+})
+
 decimalBtn.addEventListener('click', function() {
     if(operator === undefined) {
         if(secondOperand === undefined && !display.textContent.includes('.'))
@@ -269,7 +452,28 @@ decimalBtn.addEventListener('click', function() {
      }
     );
 
-equalsBtn.addEventListener('click', function () {
+    document.addEventListener('keydown', (e) => {
+        if(e.key === ".") {
+            if(operator === undefined) {
+                if(secondOperand === undefined && !display.textContent.includes('.'))
+                firstOperand = display.textContent += '.';
+             } else {
+                if(!display.textContent.includes('.'))
+                    secondOperand = display.textContent += '.';
+                }
+             }
+        })
+
+    
+
+equalsBtn.addEventListener('click', function equals() {
     display.textContent = operate();
     toggle = "active";
 });
+
+document.addEventListener('keydown', (e) => {
+    if(e.key === "Enter") {
+        toggle = "active";
+        return display.textContent = operate();
+    }
+})
